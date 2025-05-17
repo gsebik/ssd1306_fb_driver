@@ -2,10 +2,10 @@
 /plugin/;
 
 / {
-    compatible = "brcm,bcm2835";  // For Raspberry Pi
+    compatible = "brcm,bcm2835";  // For Raspberry Pi4
 
     fragment@0 {
-        target = <&i2c1>;  // I2C bus you are using
+        target = <&i2c1>;  // I2C bus selections
 
         __overlay__ {
             #address-cells = <1>;
@@ -17,13 +17,14 @@
                 solomon,width = <128>;
                 solomon,height = <32>;
                 solomon,page-offset = <0>;
-                solomon,col-offset = <0>;
-	        solomon,com-invdir;
-		solomon,com-seq;              // <-- Important to add
-        	solomon,com-offset = <0>;
-	        solomon,lookup-table = /bits/ 8 <0x3f 0x3f 0x3f 0x3f>; 
+                solomon,col-offset = <0>;  
+                solomon,com-invdir;
+                solomon,com-seq;
+                solomon,com-offset = <0>;
+                solomon,lookup-table = /bits/ 8 <0x3f 0x3f 0x3f 0x3f>; 
             };
         };
     };
 };
+
 

@@ -815,3 +815,4 @@ module_i2c_driver(ssd1307fb_driver);
 MODULE_DESCRIPTION("FB driver for the Solomon SSD1307 OLED controller");
 MODULE_AUTHOR("Maxime Ripard <maxime.ripard@free-electrons.com>");
 MODULE_LICENSE("GPL");
+
